@@ -20,18 +20,20 @@ public class SceneController {
         stage.show();
     }
 
-//    public static void changeScenes(ActionEvent event, String fxmlFileName, String id) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileName));
-//        Scene scene = new Scene(fxmlLoader.load());
-//
-//        //get the Controller for the destination view and call the "loadMovie()" method
+    public static void changeScenes(ActionEvent event, String fxmlFileName, String id) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileName));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        //get the Controller for the destination view and call the "loadMovie()" method
 //        MovieLoader controller = fxmlLoader.getController();
 //        controller.loadMovie(imdbID);
-//
-//        //get the Stage from the ActionEvent
-//        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//
-//        stage.setScene(scene);
-//        stage.show();
-//    }
+
+        //get the Stage from the ActionEvent
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        // Create a new stage for the detailed view
+        stage.setScene(scene);
+        stage.setTitle("Superhero Details");
+        stage.show();
+    }
 }

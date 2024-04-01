@@ -46,10 +46,16 @@
 <!--          </right>-->
 <!--        </BorderPane>-->
       </VBox>
-      <VBox fx:id="selectedVBox" alignment="TOP_CENTER" prefHeight="417.0" prefWidth="320.0">
+      <VBox alignment="TOP_CENTER" prefHeight="417.0" prefWidth="320.0">
+
+        <padding>
+          <Insets top="10.0" bottom="10.0" />
+        </padding>
 
         <ImageView fx:id="heroImageView" fitHeight="349.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" />
-        <Button fx:id="btnDetails" mnemonicParsing="false" onAction="#getHeroDetails" text="Details &gt;&gt;" />
+
+
+        <Button fx:id="btnDetails" mnemonicParsing="false" onAction="#getHeroDetails" text="See Details" />
       </VBox>
     </HBox>
   </VBox>

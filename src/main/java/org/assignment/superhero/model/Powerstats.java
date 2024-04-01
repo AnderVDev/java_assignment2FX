@@ -49,7 +49,7 @@ public class Powerstats {
         this.durability = durability;
     }
 
-    public int getPower() {
+    public Integer getPower() {
         return power;
     }
 
