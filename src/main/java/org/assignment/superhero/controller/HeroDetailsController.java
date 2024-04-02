@@ -23,7 +23,11 @@ import java.util.Map;
 public class HeroDetailsController {
 
     @FXML
-    public Button btnBack;
+    private Label appearance;
+    @FXML
+    private Button btnBack;
+    @FXML
+    public Label alterLabel;
     @FXML
     private Label alignment;
     @FXML
@@ -47,6 +51,8 @@ public class HeroDetailsController {
         idLabel.setText(superhero.getBiography().getFullName());
         alignment.setText(superhero.getBiography().getAlignment());
         publisher.setText(superhero.getBiography().getPublisher());
+        alterLabel.setText(superhero.getBiography().getAlterEgos());
+        appearance.setText(superhero.getBiography().getFirstAppearance());
 
         // Load and set the hero's image
         String imagePath = superhero.getImages().getMd();
